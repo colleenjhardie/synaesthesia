@@ -5,8 +5,7 @@
    "version": "0.1",
    "options_page": "./html/options.html",
    "background" : {
-      "scripts": ["./js/vendor/jquery-1.10.2.min.js",
-                  "./js/synaesthete.js"]
+      "scripts": ["./js/synaesthete.js"]
   },
    "page_action": {
       "default_icon": {
@@ -14,6 +13,6 @@
       }
    },
    "permissions": [
-      "tabs", "storage", "https://appengine.google.com/*"
+      "tabs", "https://appengine.google.com/*"
    ]
 }

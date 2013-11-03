@@ -10,8 +10,6 @@ chrome.pageAction.onClicked.addListener(function(tab) {
     chrome.tabs.sendRequest(tab.id, {}, null);
 });
 
-var storage = chrome.storage.local;
-
 var checkUrl = function checkUrl(tabId, changeInfo, tab) {
 
     if (tab.url.indexOf('https://appengine.google.com/') > -1) {
@@ -29,6 +27,4 @@ var checkUrl = function checkUrl(tabId, changeInfo, tab) {
 };
 
 // Listen for changes to any URL in any tab
-$(document).ready(function() {
-    chrome.tabs.onUpdated.addListener(checkUrl);
-});
+chrome.tabs.onUpdated.addListener(checkUrl);
