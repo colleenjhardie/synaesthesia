@@ -1,26 +1,15 @@
-chrome.tabs.onSelectionChanged.addListener(function(tabId) {
-    chrome.pageAction.show(tabId);
-});
-
-chrome.tabs.getSelected(null, function(tab) {
-    chrome.pageAction.show(tab.id);
-});
-
-chrome.pageAction.onClicked.addListener(function(tab) {
-    chrome.tabs.sendRequest(tab.id, {}, null);
-});
-
 // SYNAESTHETIC COLOURS
 
-var synaestheticDevColor = '#5882FA'
-var synaestheticTestColor = '#8C7853'
-var synaestheticDemoColor = '#5882FA'
+var synaestheticDevColor = '#CEE3F6'
+var synaestheticTestColor = '#CDC0B0'
+var synaestheticDemoColor = '#CEE3F6'
 
 // NORMAL COLOURS
 
-var normalDevColor = '#58FA58'
-var normalTestColor = '#F4FA58'
-var normalDemoColor = '#FF8000'
+var normalDevColor = '#E6F8E0'
+var normalTestColor = '#F5F6CE'
+var normalDemoColor = '#F6E3CE'
+
 
 var setPageAction = function(tabId) {
     // Display the page action icon.
@@ -30,15 +19,15 @@ var setPageAction = function(tabId) {
 var setColors = function(tab) {
     if (tab.url.indexOf('-dev') > -1) {
         // This is a DEV environment.
-        chrome.tabs.executeScript({code: 'document.getElementById("hd").style.backgroundColor="' + synaestheticDevColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticDevColor + '"'});
     }
     else if (tab.url.indexOf('-test') > -1) {
         // This is a TEST environment.
-        chrome.tabs.executeScript({code: 'document.getElementById("hd").style.backgroundColor="' + synaestheticTestColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticTestColor + '"'});
     }
     else if (tab.url.indexOf('-demo') > -1) {
         // This is a TEST environment.
-        chrome.tabs.executeScript({code: 'document.getElementById("hd").style.backgroundColor="' + synaestheticDemoColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticDemoColor + '"'});
     }
 };
 
