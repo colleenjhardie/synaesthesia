@@ -5,14 +5,15 @@
    "version": "0.1",
    "options_page": "./html/options.html",
    "background" : {
-      "scripts": ["./js/background.js"]
+      "scripts": ["./js/vendor/jquery-1.10.2.min.js",
+                  "./js/synaesthete.js"]
   },
    "page_action": {
       "default_icon": {
          "19": "./images/page_icon.png"
       }
    },
-   "permissions": [ 
-      "tabs"
+   "permissions": [
+      "tabs", "storage", "https://appengine.google.com/*"
    ]
 }

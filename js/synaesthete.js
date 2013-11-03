@@ -10,20 +10,23 @@ chrome.pageAction.onClicked.addListener(function(tab) {
     chrome.tabs.sendRequest(tab.id, {}, null);
 });
 
-// Check to see if a tab URL is that of a GAE console or the GAE 'My Applictions' summary page.  If so, call the page
-// action.
-function checkUrl(tabId, changeInfo, tab) {
+var storage = chrome.storage.local;
+
+var checkUrl = function checkUrl(tabId, changeInfo, tab) {
+
     if (tab.url.indexOf('https://appengine.google.com/') > -1) {
-        console.log("Found an appengine page...");
+
+        // This is an appengine admin page.  Display the page action icon.
         chrome.pageAction.show(tabId);
-	}
-    if (tab.url.indexOf('-dev') > -1) {
-        console.log("About to pretty up dev.");
-        var color = $( this ).css( "ae-dashboard-body" );
-        console.log(color);
-      //$this.getAttribute('body').css("ae-dashboard-body", "#ff0000");
+
+        if (tab.url.indexOf('-dev') > -1) {
+            // This is a DEV environment.
+            console.log("About to pretty up dev.");
+            chrome.tabs.executeScript({code: 'document.getElementById("hd").style.backgroundColor="#00ffcc"'});
+        }
     }
-}
+    return false;
+};
 
 // Listen for changes to any URL in any tab
 $(document).ready(function() {
