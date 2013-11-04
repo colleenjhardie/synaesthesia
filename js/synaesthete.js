@@ -1,14 +1,14 @@
 // SYNAESTHETIC COLOURS
 
-var synaestheticDevColor = '#CEE3F6'
-var synaestheticTestColor = '#CDC0B0'
-var synaestheticDemoColor = '#CEE3F6'
+var synaestheticDevColor = '#CEE3F6';
+var synaestheticTestColor = '#CDC0B0';
+var synaestheticDemoColor = '#CEE3F6';
 
 // NORMAL COLOURS
 
-var normalDevColor = '#E6F8E0'
-var normalTestColor = '#F5F6CE'
-var normalDemoColor = '#F6E3CE'
+var normalDevColor = '#E6F8E0';
+var normalTestColor = '#F5F6CE';
+var normalDemoColor = '#F6E3CE';
 
 
 var setPageAction = function(tabId) {
@@ -19,15 +19,15 @@ var setPageAction = function(tabId) {
 var setColors = function(tab) {
     if (tab.url.indexOf('-dev') > -1) {
         // This is a DEV environment.
-        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticDevColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + normalDevColor + '"'});
     }
     else if (tab.url.indexOf('-test') > -1) {
         // This is a TEST environment.
-        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticTestColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + normalTestColor + '"'});
     }
     else if (tab.url.indexOf('-demo') > -1) {
         // This is a TEST environment.
-        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + synaestheticDemoColor + '"'});
+        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + normalDemoColor + '"'});
     }
 };
 
