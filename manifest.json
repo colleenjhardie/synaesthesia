@@ -5,7 +5,8 @@
    "version": "0.1",
    "options_page": "./html/options.html",
    "background" : {
-      "scripts": ["./js/synaesthete.js"]
+      "scripts": ["./js/synaesthete.js"],
+      "run_at" : "document_start"
   },
    "page_action": {
       "default_icon": {
@@ -13,6 +14,7 @@
       }
    },
    "permissions": [
+      "background",
       "tabs", "https://appengine.google.com/*"
    ]
 }

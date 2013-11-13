@@ -19,7 +19,8 @@ var setPageAction = function(tabId) {
 var setColors = function(tab) {
     if (tab.url.indexOf('-dev') > -1) {
         // This is a DEV environment.
-        chrome.tabs.executeScript({code: 'document.body.style.backgroundColor="' + normalDevColor + '"'});
+        chrome.tabs.insertCSS(null, {file: "css/dev.css"});
+        console.log('inserting css bitch')
     }
     else if (tab.url.indexOf('-test') > -1) {
         // This is a TEST environment.
