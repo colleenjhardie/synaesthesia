@@ -1,9 +1,8 @@
-
 body {
-    background-color: #F5F6CE;
+    background-color: #F5F6CE !important;
 }
 .g-doc {
-    background-color: #F5F6CE;
+    background-color: #F5F6CE !important;
 }
 #ae-appbar-lrg {
     background-color: #949485 !important;
