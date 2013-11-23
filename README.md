@@ -9,3 +9,5 @@ Contributors
 [Colleen J. Hardie](https://github.com/colleenjhardie "Colleen!")  
 [Braden Bassingthwaite](https://github.com/bbBradenbb "Braden!")  
 [Graham Holtslander](https://github.com/gholtsla "Graham!")  
+
+[Page icon](www.flaticon.com/free-icon/brush-tool_536 "Page icon") made by [Freepik](http://www.freepik.com "Freepik")
