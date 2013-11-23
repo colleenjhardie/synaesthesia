@@ -6,5 +6,6 @@ A chrome extension that changes the default colours of the GAE admin console bas
 Contributors
 ============
 
-<a href="https://github.com/colleenjhardie" target="_blank">Colleen J. Hardie</a><br />
-<a href="https://github.com/bbBradenbb" target="_blank">Braden Bassingthwaite</a>
+[Colleen J. Hardie](https://github.com/colleenjhardie "Colleen!")  
+[Braden Bassingthwaite](https://github.com/bbBradenbb "Braden!")  
+[Graham Holtslander](https://github.com/gholtsla "Graham!")  
