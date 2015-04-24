@@ -2,7 +2,7 @@
    "manifest_version": 2,
    "name": "synaesthesia",
    "description": "A chrome extension that changes the default colours of the GAE admin console based on app ID.",
-   "version": "0.1",
+   "version": "0.2",
    "options_page": "./html/options.html",
    "background" : {
       "scripts": ["./js/synaesthete.js"],
@@ -15,6 +15,6 @@
    },
    "permissions": [
       "background",
-      "tabs", "https://appengine.google.com/*"
+      "tabs", "https://appengine.google.com/*", "https://console.developers.google.com/project/repcore-dev"
    ]
 }
